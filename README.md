@@ -1,23 +1,23 @@
-* Design Mockup
-*** Basic Info
+# Design Mockup
+### Basic Info
 
 
-*** Project Name
+### Project Name
 Bear Market
 
 
-*** Problem Domain
+### Problem Domain
 Ecommerce / Student
 
-*** Problem Overview
+### Problem Overview
 At UC Berkeley, students who need discounted or free groceries provided by some of the programs here, they need to line up in MLK in front of their peers to do so. This can prove to be embarrassing as they feel labeled as a certain category.
 
 
-*** Solution Overview
+### Solution Overview
 Users can order groceries straight from their app
 Users can use the map to tell where the groceries or items would be picked up.
 
-*** Timeline
+### Timeline
 Finish the main view by Nov 22
 Finish profile view by Nov 29
 Finish the settings view by Dec 01
@@ -25,22 +25,22 @@ Set up the firebase by Dec 02
 Set up the API by Dec 05
 Connect the frontend with the backend by Dec 05
 
-*** Necessary APIs and Tech Stack
-**** Frontend:
+### Necessary APIs and Tech Stack
+#### Frontend:
 SwiftUI for displaying views
-**** Backend: 
+#### Backend: 
 Firebase for authentication and database
 Mapkit to display user information
 
 
 
-*** Breakdown  of Responsibilities
+### Breakdown  of Responsibilities
 Eloy: Will be responsible for the modelview and the integration of the frontend and the backend.
 Canhui: will work on the frontend of the application and the design.
 Chris: will work on the backend.
 Rachel: will work on the frontend of the application and the design.
 
-*** Figma Link
+### Figma Link
 Design 1: https://www.figma.com/file/KfSrAYuFenZYgjOcgOHmbH/Untitled?node-id=1%3A18&t=s0SsVZf901UXmYQs-1 
 Design 2:
 https://www.figma.com/file/65Pd9bdVpUGBYWrA65YPzd/BearMarket-Design-2?node-id=4%3A73&t=0ary77bV02Q7QRBo-1
