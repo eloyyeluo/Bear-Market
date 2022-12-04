@@ -1,15 +1,14 @@
 //
 //  ContentView.swift
-//  Cart
+//  Summary
 //
 //  Created by Canhui Huang on 12/4/22.
 //
-
 import SwiftUI
 
 class Items: Identifiable {
-    var itemName: String
     
+    var itemName: String
     var stock: String
     
     init(itemName: String, stock: String) {
@@ -20,13 +19,13 @@ class Items: Identifiable {
 
 struct ContentView: View {
     @State var tempItemName: String = ""
-    @State var index: Int = 0
+    @State var locker: String = "A5"
+    @State var code: String = "4396"
     
     @State var list = [
         Items(itemName: "Apples", stock: ""),
         Items(itemName: "Bananas", stock: ""),
         Items(itemName: "Broccoli", stock: ""),
-        Items(itemName: "Cheese", stock: ""),
         Items(itemName: "Salmon", stock: ""),
         Items(itemName: "SPAM", stock: "")
     ]
@@ -35,37 +34,23 @@ struct ContentView: View {
         NavigationView {
             List {
                 HStack{
-                    TextField((""), text: $tempItemName)
+                    Text("Your Locker: ")
+                    Text(locker)
                 }
                 
-                Button("Remove from Cart"){
-                    if(tempItemName != ""){
-                        removeItem()
+                HStack{
+                    Text("Your Code: ")
+                    Text(code)
+                }
+                
+                HStack{
+                    Text("Items: ")
+                }
+                    ForEach(list) {listItem in
+                        CustomCell(itemName: listItem.itemName)
                     }
-                }
                 
-                ForEach(list) { listItem in
-                    CustomCell(itemName: listItem.itemName)
-                }
-                
-                Button("Place the Order"){
-                    
-                }
-                
-            }.navigationTitle("Cart")
+            }.navigationTitle("Summary")
         }
-    }
-    
-    func removeItem(){
-        for items in list {
-            if items.itemName == tempItemName{
-                list.remove(at: index)
-            }else{
-                index += 1
-            }
-        }
-        
-        tempItemName = ""
-        index = 0
     }
 }
