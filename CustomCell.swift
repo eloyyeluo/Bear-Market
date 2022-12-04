@@ -1,6 +1,6 @@
 //
 //  CustomCell.swift
-//  Food Pantry
+//  Cart
 //
 //  Created by Canhui Huang on 12/4/22.
 //
@@ -10,8 +10,6 @@ import SwiftUI
 struct CustomCell: View {
     
     var itemName: String
-    
-    var stock: String
     
     var body: some View {
         HStack {
@@ -23,8 +21,6 @@ struct CustomCell: View {
                 .padding(20)
             
             Spacer()
-    
-            Text(stock)
         }
     }
 }
