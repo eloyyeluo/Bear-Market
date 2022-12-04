@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct FoodPantryView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+    @State var tempItemName: String = ""
+
+        @State var list = [
+            Items(itemName: "Apples", stock: "In Stock"),
+            Items(itemName: "Bananas", stock: "In Stock"),
+            Items(itemName: "Broccoli", stock: "Out of Stock"),
+            Items(itemName: "Cheese", stock: "In Stock"),
+            Items(itemName: "Eggs", stock: "Out of Stock"),
+            Items(itemName: "Milk", stock: "In Stock"),
+            Items(itemName: "Pasta", stock: "Out of Stock"),
+            Items(itemName: "Salmon", stock: "In Stock"),
+            Items(itemName: "SPAM", stock: "Out of Stock")
+        ]
+
+        var body: some View {
+            NavigationView {
+                List {
+                    HStack{
+                        TextField(("Item Name"), text: $tempItemName)
+                    }
+
+                    Button("Add to Cart"){
+//                        if(tempItemName != ""){
+//                            addItem()
+//                        }
+                    }
+
+                    ForEach(list) { listItem in
+                        CustomCell(itemName: listItem.itemName, stock: listItem.stock)
+                    }
+                }.navigationTitle("Food Pantry")
+            }
+        }
 }
 
 struct FoodPantryView_Previews: PreviewProvider {
