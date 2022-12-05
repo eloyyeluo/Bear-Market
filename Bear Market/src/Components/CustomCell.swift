@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomCell: View {
     
     var itemName: String
-    var stock: String?
+    var quantity: String?
     
     var body: some View {
         HStack {
@@ -22,7 +22,7 @@ struct CustomCell: View {
                 .padding(20)
                 
             Spacer()
-            Text(stock!)
+            Text(quantity!)
         }
     }
 }

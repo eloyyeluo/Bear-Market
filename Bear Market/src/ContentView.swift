@@ -9,11 +9,11 @@ import SwiftUI
 class Items: Identifiable {
     
     var itemName: String
-    var stock: String
+    var quantity: String
     
-    init(itemName: String, stock: String) {
+    init(itemName: String, quantity: String) {
         self.itemName = itemName
-        self.stock = stock
+        self.quantity = quantity
     }
 }
 
