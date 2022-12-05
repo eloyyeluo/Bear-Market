@@ -9,22 +9,40 @@ import SwiftUI
 class Items: Identifiable {
     
     var itemName: String
-    var stock: String
+    var quantity: String
     
-    init(itemName: String, stock: String) {
+    init(itemName: String, quantity: String) {
         self.itemName = itemName
-        self.stock = stock
+        self.quantity = quantity
     }
 }
 
 struct ContentView: View {
     var body: some View {
-        SummaryView();
+        NavigationView {
+            TabView{
+                SummaryView()
+                    .tabItem {
+                        Image(systemName: "book.circle")
+                                            Text("Summary")
+                    }
+                CartView()
+                    .tabItem {
+                        Image(systemName: "cart")
+                                            Text("Cart")
+                    }
+                FoodPantryView()
+                    .tabItem{
+                        Image(systemName: "person.crop.circle")
+                                            Text("Food Pantry")
+                    }
+            }
+        }
     }
 }
 
-struct ContentView_Preview: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    struct ContentView_Preview: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
-}

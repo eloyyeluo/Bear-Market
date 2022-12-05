@@ -12,15 +12,15 @@ struct CartView: View {
     @State var tempItemName: String = ""
     
     @State var list = [
-        Items(itemName: "Apples", stock: "In Stock"),
-        Items(itemName: "Bananas", stock: "In Stock"),
-        Items(itemName: "Broccoli", stock: "Out of Stock"),
-        Items(itemName: "Cheese", stock: "In Stock"),
-        Items(itemName: "Eggs", stock: "Out of Stock"),
-        Items(itemName: "Milk", stock: "In Stock"),
-        Items(itemName: "Pasta", stock: "Out of Stock"),
-        Items(itemName: "Salmon", stock: "In Stock"),
-        Items(itemName: "SPAM", stock: "Out of Stock")
+        Items(itemName: "Apples", quantity: "In quantity"),
+        Items(itemName: "Bananas", quantity: "In quantity"),
+        Items(itemName: "Broccoli", quantity: "Out of quantity"),
+        Items(itemName: "Cheese", quantity: "In quantity"),
+        Items(itemName: "Eggs", quantity: "Out of quantity"),
+        Items(itemName: "Milk", quantity: "In quantity"),
+        Items(itemName: "Pasta", quantity: "Out of quantity"),
+        Items(itemName: "Salmon", quantity: "In quantity"),
+        Items(itemName: "SPAM", quantity: "Out of quantity")
     ]
     
     var body: some View {
@@ -37,7 +37,7 @@ struct CartView: View {
                 }
                 
                 ForEach(list) { listItem in
-                    CustomCell(itemName: listItem.itemName, stock: listItem.stock)
+                    CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
                 }
             }.navigationTitle("Cart")
         }
