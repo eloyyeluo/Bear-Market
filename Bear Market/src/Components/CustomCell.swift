@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomCell: View {
     
     var itemName: String
-    var quantity: String?
+    var quantity: Int
     
     var body: some View {
         HStack {
@@ -22,7 +22,15 @@ struct CustomCell: View {
                 .padding(20)
                 
             Spacer()
-            Text(quantity!)
+            if (quantity == 0) {
+                Text("Out of Stock")
+            } else if (quantity > 0 && quantity < 11) {
+                Text("\(quantity) remaining")
+                    .foregroundColor(.yellow)
+            } else {
+                Text("In Stock")
+            }
+            
         }
     }
 }
