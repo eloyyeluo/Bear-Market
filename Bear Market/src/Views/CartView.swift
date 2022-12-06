@@ -8,41 +8,74 @@
 import SwiftUI
 
 struct CartView: View {
-    
     @State var tempItemName: String = ""
-    
+    @State var tempItemQuantity: String = ""
+    @State var index = 0
+
+    @State var num1: Int = 6
+    @State var num2: Int = 3
+
+
     @State var list = [
-        Items(itemName: "Apples", quantity: "In quantity"),
-        Items(itemName: "Bananas", quantity: "In quantity"),
-        Items(itemName: "Broccoli", quantity: "Out of quantity"),
-        Items(itemName: "Cheese", quantity: "In quantity"),
-        Items(itemName: "Eggs", quantity: "Out of quantity"),
-        Items(itemName: "Milk", quantity: "In quantity"),
-        Items(itemName: "Pasta", quantity: "Out of quantity"),
-        Items(itemName: "Salmon", quantity: "In quantity"),
-        Items(itemName: "SPAM", quantity: "Out of quantity")
+        Items(itemName: "Apples", quantity: 32),
+        Items(itemName: "Bananas", quantity: 48),
+        Items(itemName: "Broccoli", quantity: 72),
+        Items(itemName: "Cheese", quantity: 66),
+        Items(itemName: "Salmon", quantity: 54),
+        Items(itemName: "SPAM", quantity: 42)
     ]
-    
+
     var body: some View {
         NavigationView {
             List {
-                HStack{
-                    TextField(("Item Name"), text: $tempItemName)
+                Section {
+                    HStack{
+                        TextField(("Item Name"), text: $tempItemName)
+                        TextField(("Quantity"), text: $tempItemQuantity)
+                    }
+
+                    Button("Remove from Cart"){
+                        if(tempItemName != ""){
+                            removeItem()
+                        }
+                    }.foregroundColor(.red)
                 }
-                
-                Button("Add to Cart"){
-                    //                        if(tempItemName != ""){
-                    //                            addItem()
-                    //                        }
+                Section(header: Text("Your Items")) {
+                    ForEach(list) { listItem in
+                        CartCell(itemName: listItem.itemName, quantity: listItem.quantity)
+                    }
+
+                    Button("Place the Order"){
+
+                    }
                 }
-                
-                ForEach(list) { listItem in
-                    CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
-                }
+
             }.navigationTitle("Cart")
         }
     }
-}
+    func removeItem(){
+            for items in list {
+                if items.itemName == tempItemName{
+                    let removeQuantity = Int(tempItemQuantity) ?? 0
+                    let totalQuantity = Int(items.quantity) ?? 0
+
+                    if(removeQuantity >= totalQuantity){
+                        list.remove(at: index)
+                    }else{
+                        let remain = totalQuantity - removeQuantity
+                        items.quantity = remain
+                    }
+
+                }else{
+                    index += 1
+                }
+            }
+
+            tempItemQuantity = ""
+            tempItemName = ""
+            index = 0
+        }
+    }
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView()

@@ -6,17 +6,6 @@
 //
 import SwiftUI
 
-class Items: Identifiable {
-    
-    var itemName: String
-    var quantity: String
-    
-    init(itemName: String, quantity: String) {
-        self.itemName = itemName
-        self.quantity = quantity
-    }
-}
-
 struct ContentView: View {
     var body: some View {
         NavigationView {

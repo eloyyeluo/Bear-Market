@@ -1,17 +1,19 @@
 //
-//  CustomCell.swift
-//  Cart
+//  CartCell.swift
+//  Bear Market
 //
-//  Created by Canhui Huang on 12/4/22.
+//  Created by Eloy Ye Luo on 12/6/22.
 //
+
+import Foundation
 
 import SwiftUI
 
-struct CustomCell: View {
-    
+struct CartCell: View {
+
     var itemName: String
-    var quantity: String
-    
+    var quantity: Int
+
     var body: some View {
         HStack {
             Image(itemName)
@@ -20,9 +22,10 @@ struct CustomCell: View {
                 .frame(width: 50, height: 50)
             Text(itemName)
                 .padding(20)
-            
+
             Spacer()
-            Text(quantity)
+            Text(String(quantity))
         }
     }
 }
+

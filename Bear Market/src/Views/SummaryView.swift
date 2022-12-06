@@ -13,11 +13,11 @@ struct SummaryView: View {
     @State var code: String = "4396"
     
     @State var list = [
-        Items(itemName: "Apples", quantity: ""),
-        Items(itemName: "Bananas", quantity: ""),
-        Items(itemName: "Broccoli", quantity: ""),
-        Items(itemName: "Salmon", quantity: ""),
-        Items(itemName: "SPAM", quantity: "")
+        Items(itemName: "Apples", quantity: 4),
+//        Items(itemName: "Bananas", quantity: ""),
+//        Items(itemName: "Broccoli", quantity: ""),
+//        Items(itemName: "Salmon", quantity: ""),
+//        Items(itemName: "SPAM", quantity: "")
     ]
         
     var body: some View {
@@ -37,7 +37,7 @@ struct SummaryView: View {
                     Text("Items: ")
                 }
                     ForEach(list) {listItem in
-                        CustomCell(itemName: listItem.itemName, quantity:"")
+                        CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
                     }
                 
             }.navigationTitle("Summary")

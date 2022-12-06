@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-
-            TabView{
+        NavigationView{
+            TabView {
                 SummaryView()
                     .tabItem {
                         Image(systemName: "book.circle")
@@ -27,6 +27,7 @@ struct MainView: View {
                                             Text("Food Pantry")
                     }
             }.navigationBarBackButtonHidden(true)
+        }
     }
 }
 

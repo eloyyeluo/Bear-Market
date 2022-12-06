@@ -25,8 +25,12 @@
 		B47B527929380AE400581AC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47B527829380AE400581AC6 /* ContentView.swift */; };
 		B47B527B29380AE600581AC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47B527A29380AE600581AC6 /* Assets.xcassets */; };
 		B47B527E29380AE600581AC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47B527D29380AE600581AC6 /* Preview Assets.xcassets */; };
+		B4C18714293FEF5500FB4875 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C18713293FEF5500FB4875 /* CartCell.swift */; };
+		B4C18716293FF37100FB4875 /* FoodPantryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C18715293FF37100FB4875 /* FoodPantryCell.swift */; };
+		B4C18718293FF52C00FB4875 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C18717293FF52C00FB4875 /* NumbersOnly.swift */; };
 		B4C529EF293ECAB7004BF323 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C529EE293ECAB7004BF323 /* LoginButton.swift */; };
 		B4C529F1293ECB71004BF323 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C529F0293ECB71004BF323 /* MainView.swift */; };
+		B4C529F3293ED786004BF323 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C529F2293ED786004BF323 /* ItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +48,12 @@
 		B47B527829380AE400581AC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B47B527A29380AE600581AC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B47B527D29380AE600581AC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B4C18713293FEF5500FB4875 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		B4C18715293FF37100FB4875 /* FoodPantryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPantryCell.swift; sourceTree = "<group>"; };
+		B4C18717293FF52C00FB4875 /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
 		B4C529EE293ECAB7004BF323 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		B4C529F0293ECB71004BF323 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B4C529F2293ED786004BF323 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,8 @@
 		B41AD50E293D1B99000FC583 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4C529F2293ED786004BF323 /* ItemModel.swift */,
+				B4C18717293FF52C00FB4875 /* NumbersOnly.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +123,8 @@
 			children = (
 				B453D81F293D15350043B3EF /* CustomCell.swift */,
 				B4C529EE293ECAB7004BF323 /* LoginButton.swift */,
+				B4C18713293FEF5500FB4875 /* CartCell.swift */,
+				B4C18715293FF37100FB4875 /* FoodPantryCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -248,17 +260,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C529EF293ECAB7004BF323 /* LoginButton.swift in Sources */,
+				B4C18714293FEF5500FB4875 /* CartCell.swift in Sources */,
 				B4C529F1293ECB71004BF323 /* MainView.swift in Sources */,
+				B4C529F3293ED786004BF323 /* ItemModel.swift in Sources */,
 				B47B527929380AE400581AC6 /* ContentView.swift in Sources */,
 				B453D82D293D189A0043B3EF /* SummaryView.swift in Sources */,
 				B453D82B293D18480043B3EF /* FoodPantryView.swift in Sources */,
 				48C66A16293DC7E700CFC4AA /* LoginView.swift in Sources */,
 				B453D829293D182B0043B3EF /* CartView.swift in Sources */,
 				48C66A32293EBF1300CFC4AA /* WelcomeView.swift in Sources */,
+				B4C18718293FF52C00FB4875 /* NumbersOnly.swift in Sources */,
 				B47B527729380AE400581AC6 /* Bear_MarketApp.swift in Sources */,
 				B453D823293D15350043B3EF /* CustomCell.swift in Sources */,
 				B41AD515293D2171000FC583 /* AuthenticationView.swift in Sources */,
 				B41AD513293D1FDC000FC583 /* AuthenticationService.swift in Sources */,
+				B4C18716293FF37100FB4875 /* FoodPantryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

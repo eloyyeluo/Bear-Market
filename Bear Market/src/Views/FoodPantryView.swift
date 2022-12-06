@@ -9,9 +9,9 @@ import SwiftUI
 
 struct FoodPantryView: View {
     @State var tempItemName: String = ""
-    
+    @ObservedObject var input = NumbersOnly()
     @State var list = [
-        Items(itemName: "Apples", quantity: "In Stock"),
+        Items(itemName: "Apples", quantity: 5),
 //        Items(itemName: "Bananas", quantity: "In Stock"),
 //        Items(itemName: "Broccoli", quantity: "Out of Stock"),
 //        Items(itemName: "Cheese", quantity: "Out of Stock"),
@@ -24,27 +24,29 @@ struct FoodPantryView: View {
         
     var body: some View {
         NavigationView {
-            List {
-                HStack{
-                    TextField(("Item Name"), text: $tempItemName)
+                    List {
+                        Section {
+                            HStack{
+                                TextField(("Item Name"), text: $tempItemName)
+                                TextField(("Quantity"), text: $input.value)
+                            }
+                            
+                            Button("Add to Cart"){
+                                if(tempItemName != "" && Int(input.value) != 0){
+                                    addItem(tempItemName: tempItemName, valu: Int(input.value)!)
+                                }
+                            }
+                        }
+                        ForEach(list) { listItem in
+                            FoodPantryCell(itemName: listItem.itemName, quantity: listItem.quantity)
+                        }
+                    }.navigationTitle("Food Pantry")
                 }
-                
-                Button("Add to Cart"){
-                    if(tempItemName != ""){
-                        addItem(tempItemName: tempItemName)
-                    }
-                }
-                
-                ForEach(list) { listItem in
-                    CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
-                }
-            }.navigationTitle("Food Pantry")
-        }
     }
     
-    func addItem(tempItemName: String){
-        if (list.contains(where: {$0.quantity == "In Stock" && $0.itemName != tempItemName})) {
-            list.append(Items(itemName: tempItemName, quantity: "In Stock"))
+    func addItem(tempItemName: String, valu: Int){
+        if (list.contains(where: {$0.quantity != 0 && $0.itemName != tempItemName})) {
+            list.append(Items(itemName: tempItemName, quantity: valu))
         }
     }
 }
