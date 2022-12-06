@@ -23,25 +23,23 @@ struct FoodPantryView: View {
     ]
         
     var body: some View {
-        NavigationView {
-                    List {
-                        Section {
-                            HStack{
-                                TextField(("Item Name"), text: $tempItemName)
-                                TextField(("Quantity"), text: $input.value)
-                            }
-                            
-                            Button("Add to Cart"){
-                                if(tempItemName != "" && Int(input.value) != 0){
-                                    addItem(tempItemName: tempItemName, valu: Int(input.value)!)
-                                }
-                            }
-                        }
-                        ForEach(list) { listItem in
-                            FoodPantryCell(itemName: listItem.itemName, quantity: listItem.quantity)
-                        }
-                    }.navigationTitle("Food Pantry")
+        List {
+            Section {
+                HStack{
+                    TextField(("Item Name"), text: $tempItemName)
+                    TextField(("Quantity"), text: $input.value)
                 }
+                
+                Button("Add to Cart"){
+                    if(tempItemName != "" && Int(input.value) != 0){
+                        addItem(tempItemName: tempItemName, valu: Int(input.value)!)
+                    }
+                }
+            }
+            ForEach(list) { listItem in
+                FoodPantryCell(itemName: listItem.itemName, quantity: listItem.quantity)
+            }
+        }
     }
     
     func addItem(tempItemName: String, valu: Int){

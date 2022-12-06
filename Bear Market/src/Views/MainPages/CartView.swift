@@ -26,7 +26,6 @@ struct CartView: View {
     ]
 
     var body: some View {
-        NavigationView {
             List {
                 Section {
                     HStack{
@@ -49,9 +48,7 @@ struct CartView: View {
 
                     }
                 }
-
-            }.navigationTitle("Cart")
-        }
+            }
     }
     func removeItem(){
             for items in list {
