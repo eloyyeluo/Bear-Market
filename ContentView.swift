@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Cart
+//  Food Pantry
 //
 //  Created by Canhui Huang on 12/4/22.
 //
@@ -21,10 +21,17 @@ class Items: Identifiable {
 struct ContentView: View {
     @State var tempItemName: String = ""
     @State var tempItemQuantity: String = ""
-    @State var index = 0
     
     @State var list = [
-        Items(itemName: "", quantity: ""),
+        Items(itemName: "Apple", quantity: "87"),
+        Items(itemName: "Banana", quantity: "92"),
+        Items(itemName: "Broccoli", quantity: "34"),
+        Items(itemName: "Cheese", quantity: "66"),
+        Items(itemName: "Egg", quantity: "78"),
+        Items(itemName: "Milk", quantity: "102"),
+        Items(itemName: "Pasta", quantity: "44"),
+        Items(itemName: "Salmon", quantity: "59"),
+        Items(itemName: "SPAM", quantity: "33")
     ]
         
     var body: some View {
@@ -35,46 +42,33 @@ struct ContentView: View {
                     TextField(("Quantity"), text: $tempItemQuantity)
                 }
                 
-                Button("Remove from Cart"){
-                    if(tempItemName != ""){
-                        removeItem()
+                Button("Add to Cart"){
+                    if(tempItemName != "" && tempItemQuantity != ""){
+                        addItem()
                     }
                 }
-                Text("Items: ")
+                
                 ForEach(list) { listItem in
-                    CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
+                    FoodPantryCell(itemName: listItem.itemName, quantity: listItem.quantity)
                 }
-                
-                Button("Place the Order"){
-                    
-                }
-                
-            }.navigationTitle("Cart")
+            }.navigationTitle("Food Pantry")
         }
     }
     
-    func removeItem(){
-        if(!list.isEmpty){
-            for items in list {
-                if items.itemName == tempItemName{
-                    let removeQuantity = Int(tempItemQuantity) ?? 0
-                    let totalQuantity = Int(items.quantity) ?? 0
-                    
-                    if(removeQuantity >= totalQuantity){
-                        list.remove(at: index)
-                    }else{
-                        let remain = totalQuantity - removeQuantity
-                        items.quantity = String(remain)
-                    }
-                    
+    func addItem(){
+        for items in list{
+            if items.itemName == tempItemName{
+                let totalQuantity = Int(items.quantity) ?? 0
+                let demand = Int(tempItemQuantity) ?? 0
+                if totalQuantity >= demand{
+                    let remain = totalQuantity - demand
+                    items.quantity = String(remain)
                 }else{
-                    index += 1
+                    items.quantity = "0"
                 }
             }
         }
-    
         tempItemQuantity = ""
         tempItemName = ""
-        index = 0
     }
 }
