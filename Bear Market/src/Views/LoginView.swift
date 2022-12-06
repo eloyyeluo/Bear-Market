@@ -40,7 +40,7 @@ struct LoginView : View {
                     .padding(.bottom, 20)
                 NavigationLink(destination: MainView()){
                     LoginButton()
-                }
+                }.navigationBarBackButtonHidden(true)
             }.padding()
     }
     
