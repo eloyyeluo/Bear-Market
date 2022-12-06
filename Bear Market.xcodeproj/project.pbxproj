@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48C66A16293DC7E700CFC4AA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C66A15293DC7E700CFC4AA /* LoginView.swift */; };
+		48C66A32293EBF1300CFC4AA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C66A31293EBF1300CFC4AA /* WelcomeView.swift */; };
 		B41AD513293D1FDC000FC583 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AD512293D1FDB000FC583 /* AuthenticationService.swift */; };
 		B41AD515293D2171000FC583 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AD514293D2171000FC583 /* AuthenticationView.swift */; };
 		B41AD518293D22FF000FC583 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B41AD517293D22FF000FC583 /* FirebaseAuth */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48C66A15293DC7E700CFC4AA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		48C66A31293EBF1300CFC4AA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		B41AD512293D1FDB000FC583 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		B41AD514293D2171000FC583 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		B41AD521293D238C000FC583 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				B453D828293D182B0043B3EF /* CartView.swift */,
 				B453D82A293D18480043B3EF /* FoodPantryView.swift */,
 				B453D82C293D189A0043B3EF /* SummaryView.swift */,
+				48C66A15293DC7E700CFC4AA /* LoginView.swift */,
+				48C66A31293EBF1300CFC4AA /* WelcomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,7 +244,9 @@
 				B47B527929380AE400581AC6 /* ContentView.swift in Sources */,
 				B453D82D293D189A0043B3EF /* SummaryView.swift in Sources */,
 				B453D82B293D18480043B3EF /* FoodPantryView.swift in Sources */,
+				48C66A16293DC7E700CFC4AA /* LoginView.swift in Sources */,
 				B453D829293D182B0043B3EF /* CartView.swift in Sources */,
+				48C66A32293EBF1300CFC4AA /* WelcomeView.swift in Sources */,
 				B47B527729380AE400581AC6 /* Bear_MarketApp.swift in Sources */,
 				B453D823293D15350043B3EF /* CustomCell.swift in Sources */,
 				B41AD515293D2171000FC583 /* AuthenticationView.swift in Sources */,
@@ -299,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
