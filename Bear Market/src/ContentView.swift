@@ -20,23 +20,7 @@ class Items: Identifiable {
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            TabView{
-                SummaryView()
-                    .tabItem {
-                        Image(systemName: "book.circle")
-                                            Text("Summary")
-                    }
-                CartView()
-                    .tabItem {
-                        Image(systemName: "cart")
-                                            Text("Cart")
-                    }
-                FoodPantryView()
-                    .tabItem{
-                        Image(systemName: "person.crop.circle")
-                                            Text("Food Pantry")
-                    }
-            }
+          WelcomeView()
         }
     }
 }

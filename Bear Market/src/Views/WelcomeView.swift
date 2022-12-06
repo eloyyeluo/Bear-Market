@@ -11,7 +11,6 @@ import SwiftUI
 struct WelcomeView : View {
     
     var body: some View {
-        NavigationView {
             VStack {
                 Text("Bear Market")
                     .font(.largeTitle)
@@ -34,7 +33,7 @@ struct WelcomeView : View {
                         .cornerRadius(15.0)
                 }
             }
-        }
+        
         .padding()
     }
 }

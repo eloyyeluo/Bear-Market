@@ -14,52 +14,43 @@ struct LoginView : View {
     @State var password: String = ""
     
     var body: some View {
+            VStack {
+                Text("Bear Market")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding(.bottom, 20)
+                Image("bearmarket")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 150, height: 150)
+                    .clipped()
+    //                .cornerRadius(150)
+                    .padding(.bottom, 20)
+                TextField("Username", text: $username)
+                    .padding()
+                    .frame(width: 350, height: 50)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    .padding(.bottom, 20)
+                SecureField("Password", text: $password)
+                    .padding()
+                    .frame(width: 350, height: 50)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(10)
+                    .padding(.bottom, 20)
+                NavigationLink(destination: MainView()){
+                    LoginButton()
+                }.navigationBarBackButtonHidden(true)
+            }.padding()
+    }
+    
+    func signIn() {
         
-        VStack {
-            Text("Bear Market")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
-                .padding(.bottom, 20)
-            Image("bearmarket")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 150, height: 150)
-                .clipped()
-//                .cornerRadius(150)
-                .padding(.bottom, 20)
-            TextField("Username", text: $username)
-                .padding()
-                .frame(width: 350, height: 50)
-                .background(Color(.systemGray6))
-                .cornerRadius(10)
-                .padding(.bottom, 20)
-            SecureField("Password", text: $password)
-                .padding()
-                .frame(width: 350, height: 50)
-                .background(Color(.systemGray6))
-                .cornerRadius(10)
-                .padding(.bottom, 20)
-            Button(action: {print("Button tapped")}) {
-               LoginButton()
-            }
-        }.padding()
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-    }
-}
-
-struct LoginButton : View {
-    var body: some View {
-        return Text("LOGIN")
-            .font(.headline)
-            .foregroundColor(.white)
-            .padding()
-            .frame(width: 150, height: 45)
-            .background(Color.green)
-            .cornerRadius(15.0)
     }
 }
