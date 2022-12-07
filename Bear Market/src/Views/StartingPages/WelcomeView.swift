@@ -24,7 +24,7 @@ struct WelcomeView : View {
     //                .cornerRadius(150)
                     .padding(.bottom, 80)
                 NavigationLink(destination: LoginView()) {
-                    Text("Tap to Start")
+                    Text("Enter Shop!")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()

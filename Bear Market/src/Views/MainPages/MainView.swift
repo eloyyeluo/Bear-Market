@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let navTitles = ["Summary", "Cart", "Food Pantry"]
+let navTitles = ["Summary", "Cart", "Food Pantry", "Map"]
 struct MainView: View {
     @State var selection = 0
     
@@ -29,6 +29,11 @@ struct MainView: View {
                         Image(systemName: "person.crop.circle")
                                             Text("Food Pantry")
                     }.tag(2)
+                MapView()
+                    .tabItem {
+                        Image(systemName: "location")
+                                            Text("Map")
+                    }.tag(3)
                     
             }
             .navigationBarBackButtonHidden(true)
