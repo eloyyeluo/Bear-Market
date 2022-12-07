@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32D007AF29414C4300FE42E3 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D007AE29414C4300FE42E3 /* MapView.swift */; };
 		48C66A16293DC7E700CFC4AA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C66A15293DC7E700CFC4AA /* LoginView.swift */; };
 		48C66A32293EBF1300CFC4AA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C66A31293EBF1300CFC4AA /* WelcomeView.swift */; };
 		B41AD513293D1FDC000FC583 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AD512293D1FDB000FC583 /* AuthenticationService.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32D007AE29414C4300FE42E3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		48C66A15293DC7E700CFC4AA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		48C66A31293EBF1300CFC4AA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		B41AD512293D1FDB000FC583 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				B453D82C293D189A0043B3EF /* SummaryView.swift */,
 				B453D82A293D18480043B3EF /* FoodPantryView.swift */,
 				B453D828293D182B0043B3EF /* CartView.swift */,
+				32D007AE29414C4300FE42E3 /* MapView.swift */,
 			);
 			path = MainPages;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C529EF293ECAB7004BF323 /* LoginButton.swift in Sources */,
+				32D007AF29414C4300FE42E3 /* MapView.swift in Sources */,
 				B4C18714293FEF5500FB4875 /* CartCell.swift in Sources */,
 				B4C529F1293ECB71004BF323 /* MainView.swift in Sources */,
 				B4C529F3293ED786004BF323 /* ItemModel.swift in Sources */,
