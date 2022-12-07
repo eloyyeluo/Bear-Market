@@ -21,27 +21,25 @@ struct SummaryView: View {
     ]
         
     var body: some View {
-        NavigationView {
-            List {
-                HStack{
-                    Text("Your Locker: ")
-                    Text(locker)
+        List {
+            HStack{
+                Text("Your Locker: ")
+                Text(locker)
+            }
+            
+            HStack{
+                Text("Your Code: ")
+                Text(code)
+            }
+            
+            HStack{
+                Text("Items: ")
+            }
+                ForEach(list) {listItem in
+                    CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
                 }
-                
-                HStack{
-                    Text("Your Code: ")
-                    Text(code)
-                }
-                
-                HStack{
-                    Text("Items: ")
-                }
-                    ForEach(list) {listItem in
-                        CustomCell(itemName: listItem.itemName, quantity: listItem.quantity)
-                    }
-                
-            }.navigationTitle("Summary")
-        }
+            
+        }.navigationTitle("Summary")
     }
 }
 

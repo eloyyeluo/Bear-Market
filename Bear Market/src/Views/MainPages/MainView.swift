@@ -7,26 +7,33 @@
 
 import SwiftUI
 
+let navTitles = ["Summary", "Cart", "Food Pantry"]
 struct MainView: View {
+    @State var selection = 0
+    
     var body: some View {
         NavigationView{
-            TabView {
+            TabView(selection: $selection) {
                 SummaryView()
                     .tabItem {
                         Image(systemName: "book.circle")
                                             Text("Summary")
-                    }
+                    }.tag(0)
                 CartView()
                     .tabItem {
                         Image(systemName: "cart")
                                             Text("Cart")
-                    }
+                    }.tag(1)
                 FoodPantryView()
                     .tabItem{
                         Image(systemName: "person.crop.circle")
                                             Text("Food Pantry")
-                    }
-            }.navigationBarBackButtonHidden(true)
+                    }.tag(2)
+                    
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle(navTitles[selection])
+
         }
     }
 }

@@ -10,7 +10,6 @@
 		48C66A16293DC7E700CFC4AA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C66A15293DC7E700CFC4AA /* LoginView.swift */; };
 		48C66A32293EBF1300CFC4AA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C66A31293EBF1300CFC4AA /* WelcomeView.swift */; };
 		B41AD513293D1FDC000FC583 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AD512293D1FDB000FC583 /* AuthenticationService.swift */; };
-		B41AD515293D2171000FC583 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41AD514293D2171000FC583 /* AuthenticationView.swift */; };
 		B41AD518293D22FF000FC583 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B41AD517293D22FF000FC583 /* FirebaseAuth */; };
 		B41AD51A293D22FF000FC583 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B41AD519293D22FF000FC583 /* FirebaseAuthCombine-Community */; };
 		B41AD51C293D22FF000FC583 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B41AD51B293D22FF000FC583 /* FirebaseFirestore */; };
@@ -37,7 +36,6 @@
 		48C66A15293DC7E700CFC4AA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		48C66A31293EBF1300CFC4AA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		B41AD512293D1FDB000FC583 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
-		B41AD514293D2171000FC583 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		B41AD521293D238C000FC583 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B453D81F293D15350043B3EF /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		B453D828293D182B0043B3EF /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -91,13 +89,8 @@
 		B41AD511293D1BD4000FC583 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B41AD514293D2171000FC583 /* AuthenticationView.swift */,
-				B453D828293D182B0043B3EF /* CartView.swift */,
-				B453D82A293D18480043B3EF /* FoodPantryView.swift */,
-				B453D82C293D189A0043B3EF /* SummaryView.swift */,
-				48C66A15293DC7E700CFC4AA /* LoginView.swift */,
-				48C66A31293EBF1300CFC4AA /* WelcomeView.swift */,
-				B4C529F0293ECB71004BF323 /* MainView.swift */,
+				B4C1871A293FF86800FB4875 /* MainPages */,
+				B4C18719293FF85000FB4875 /* StartingPages */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +169,26 @@
 				B47B527D29380AE600581AC6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4C18719293FF85000FB4875 /* StartingPages */ = {
+			isa = PBXGroup;
+			children = (
+				48C66A15293DC7E700CFC4AA /* LoginView.swift */,
+				48C66A31293EBF1300CFC4AA /* WelcomeView.swift */,
+			);
+			path = StartingPages;
+			sourceTree = "<group>";
+		};
+		B4C1871A293FF86800FB4875 /* MainPages */ = {
+			isa = PBXGroup;
+			children = (
+				B4C529F0293ECB71004BF323 /* MainView.swift */,
+				B453D82C293D189A0043B3EF /* SummaryView.swift */,
+				B453D82A293D18480043B3EF /* FoodPantryView.swift */,
+				B453D828293D182B0043B3EF /* CartView.swift */,
+			);
+			path = MainPages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +285,6 @@
 				B4C18718293FF52C00FB4875 /* NumbersOnly.swift in Sources */,
 				B47B527729380AE400581AC6 /* Bear_MarketApp.swift in Sources */,
 				B453D823293D15350043B3EF /* CustomCell.swift in Sources */,
-				B41AD515293D2171000FC583 /* AuthenticationView.swift in Sources */,
 				B41AD513293D1FDC000FC583 /* AuthenticationService.swift in Sources */,
 				B4C18716293FF37100FB4875 /* FoodPantryCell.swift in Sources */,
 			);
