@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 
 struct LoginButton : View {
     var body: some View {
@@ -16,6 +19,14 @@ struct LoginButton : View {
             .frame(width: 150, height: 45)
             .background(Color.green)
             .cornerRadius(15.0)
+    }
+    @State var email: String = ""
+    @State var password: String = ""
+    func signIn() {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in if error != nil {
+                print(error?.localizedDescription)
+            }
+        }
     }
 }
 

@@ -7,10 +7,13 @@
 
 import Foundation
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 
 struct LoginView : View {
     
-    @State var username: String = ""
+    @State var email: String = ""
     @State var password: String = ""
     
     var body: some View {
@@ -26,7 +29,7 @@ struct LoginView : View {
                     .clipped()
     //                .cornerRadius(150)
                     .padding(.bottom, 20)
-                TextField("Username", text: $username)
+                TextField("Email", text: $email)
                     .padding()
                     .frame(width: 350, height: 50)
                     .background(Color(.systemGray6))
@@ -39,13 +42,13 @@ struct LoginView : View {
                     .cornerRadius(10)
                     .padding(.bottom, 20)
                 NavigationLink(destination: MainView()){
-                    LoginButton()
+                    VStack {
+                        LoginButton()
+                        Text("OR")
+                        Register()
+                    }
                 }.navigationBarBackButtonHidden(true)
             }.padding()
-    }
-    
-    func signIn() {
-        
     }
 }
 
