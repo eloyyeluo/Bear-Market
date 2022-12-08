@@ -16,6 +16,7 @@ struct CartView: View {
     @State var num2: Int = 3
 
 
+    
     @State var list = [
         Items(itemName: "Apples", quantity: 32),
         Items(itemName: "Bananas", quantity: 48),
@@ -72,7 +73,9 @@ struct CartView: View {
             tempItemName = ""
             index = 0
         }
-    }
+}
+
+
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView()
